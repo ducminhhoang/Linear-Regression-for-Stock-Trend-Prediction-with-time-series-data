@@ -10,11 +10,11 @@ def extract(df):
     return df_new.values.flatten()
 
 def predict_n_days(recent_data, n):
-    scaler = load(r'D:\Hoc_tren_lop\MachineLearning\BTL\checkpoint\scaler.joblib')
-    model = load(r'D:\Hoc_tren_lop\MachineLearning\BTL\checkpoint\model.joblib')
-    model_open = load(r'D:\Hoc_tren_lop\MachineLearning\BTL\checkpoint\model_open.joblib')
-    model_high = load(r'D:\Hoc_tren_lop\MachineLearning\BTL\checkpoint\model_high.joblib')
-    model_low = load(r'D:\Hoc_tren_lop\MachineLearning\BTL\checkpoint\model_low.joblib')
+    scaler = load(r'checkpoint\scaler.joblib')
+    model = load(r'checkpoint\model.joblib')
+    model_open = load(r'checkpoint\model_open.joblib')
+    model_high = load(r'checkpoint\model_high.joblib')
+    model_low = load(r'checkpoint\model_low.joblib')
     features = extract(recent_data)
     predictions = []
     current_data = features.copy()

@@ -29,7 +29,7 @@ df_hist = get_data_his(stock_dict[selected_stock])
 # Tạo các ngày cho dữ liệu dự đoán, bỏ qua ngày thứ 7 và chủ nhật
 predicted_close = predict_n_days(df_hist, n = 10)
 last_date = df_hist['time'].iloc[-1]
-pred_dates = pd.bdate_range(start=last_date, periods=predicted_close.shape[0] + 1, closed='right')
+pred_dates = pd.bdate_range(start=last_date, periods=predicted_close.shape[0] + 1, inclusive="right")
 
 # Tạo DataFrame cho dữ liệu dự đoán
 df_pred = pd.DataFrame({
